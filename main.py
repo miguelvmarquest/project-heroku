@@ -18,4 +18,4 @@ def test():
 
 
 if __name__ == '__main__':
-    app.run(port="30000", use_reloader=True) 
+    app.run(use_reloader=True) 

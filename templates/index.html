@@ -6,4 +6,8 @@
 
     <p>{{some_text}}</p>
     <p>Current year: {{current_year}}</p>
+
+    {% for city in cities %}
+        <p>{{city}}</p>
+    {% endfor %}
 {% endblock content %}

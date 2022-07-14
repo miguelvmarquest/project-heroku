@@ -14,7 +14,7 @@ def index():
 
     return render_template("index.html", some_text=some_t, current_year=current_year, cities=cities)
 
-@app.route("/about",  methods=["GET"])
+@app.route("/about",  methods=["GET", "POST"])
 def about_me():
     return render_template("about.html")
 

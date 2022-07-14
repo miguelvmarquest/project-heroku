@@ -14,7 +14,7 @@ def index():
 
     return render_template("index.html", some_text=some_t, current_year=current_year, cities=cities)
 
-@app.route("/about",  methods=["GET", "POST"])
+@app.route("/about",  methods=["POST"])
 def about_me():
     return render_template("about.html")
 
@@ -29,10 +29,12 @@ def contact():
     contact_message = request.form.get("contact-message")
 
     print(contact_name)
-    print(contact_email)
+    print(contact_name)
     print(contact_message)
 
-    return render_template("success.html")
+    lista_about=[contact_name, contact_name, contact_message]
+
+    return render_template("success.html", lista_about=lista_about)
 
 if __name__ == '__main__':
     app.run(port="443", use_reloader=True) 

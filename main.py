@@ -32,17 +32,14 @@ def contact():
     contact_email = request.form.get("contact-email")
     contact_message = request.form.get("contact-message")
 
-    print(contact_name)
-    print(contact_name)
-    print(contact_message)
 
-    lista_about=[contact_name, contact_name, contact_message]
+    lista_about=[contact_name, contact_email, contact_message]
 
     response = make_response(render_template("success.html"))
     response.set_cookie("user_name", contact_name)
 
 
-    return render_template("success.html", lista_about=lista_about)
+    return response
 
 if __name__ == '__main__':
     app.run(port="443", use_reloader=True) 
